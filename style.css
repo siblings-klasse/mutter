@@ -1,0 +1,207 @@
+@font-face {
+  font-family: 'agrandir';
+  src: url('assets/agrandir.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  padding-bottom: 3rem;
+   background: rgb(199, 199, 199);
+  font-family: 'agrandir';
+  /*mix-blend-mode: difference;*/
+}
+
+main {
+  text-align: left;
+  color: rgb(44, 44, 37);
+}
+
+.klasse {
+   font-size: 1rem;
+   padding-left: 0.5rem;
+   margin-top: 1rem;
+}
+
+.klasse h1 {
+  margin: 0.3rem 0;
+}
+
+.rotator {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 100svh;
+  height: 150svh;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  pointer-events: none;
+  mix-blend-mode: exclusion;
+  opacity: 80%;
+}
+
+.rotator img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  animation: spin 30s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+.plan-container {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 0; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  box-sizing: border-box;
+   scroll-behavior: smooth;
+   overflow: auto;
+}
+
+.room-plan {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 600px) {
+  .plan-container {
+    margin-top: 1rem;
+  }
+}
+
+.marker {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  background: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  font-size: 18px;
+  cursor: pointer;
+  z-index: 2;
+  font-size: 0.8rem;
+  font-family: 'agrandir';
+   transition: background-color 0.3s, color 0.3s;
+}
+
+#overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.8);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  color: rgb(44, 44, 37);
+  z-index: 999;
+}
+
+#overlayContent {
+  background: #c7c7c7;
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 400px;
+}
+
+#closeOverlay {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 2rem;
+  background: none;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+.artist-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1rem;
+  font-size: 1rem;
+  z-index: 100;
+   font-family: 'agrandir';
+}
+
+.artist {
+
+  display: block;
+  background: rgb(44, 44, 37);
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  text-decoration: none;
+  color: #bdbdbd;
+  font-weight: bold;
+  text-align: left;
+  transition: background 0.3s;
+}
+
+.artist:hover {
+  background: #5964c5;
+  color: #e4c61b;
+}
+.marker:focus {
+  outline: none;
+  background: #e4c61b;/* your desired highlight */
+  color: #5964c5;
+}
+
+html {
+  scroll-padding-top: 100px; /* adjust to your desired top offset */
+    overflow: visible;
+    scroll-behavior: auto;
+}
+html, body {
+  overscroll-behavior-y: none;
+  overscroll-behavior-x: none;
+  overscroll-behavior: none;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;  /* Prevent horizontal scrolling */
+  overflow-y: auto;    /* Allow vertical scrolling */
+  height: 100%;
+}
+.marker {
+  scroll-margin-top: 80px; /* adjust this value as needed */
+}
+.marker.visited {
+background-color: #5964c5; /* purple */
+  color: #e4c61b;
+
+}
+.marker.selected {
+  background-color: #e4c61b; /* yellow */
+  color: #5964c5;
+}
+
+.marker.highlight {
+  background-color: #e4c61b;
+  color:  #5964c5;;
+}
+
+
+

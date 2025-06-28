@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_Шар_2" data-name="Шар 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 468.23 265.79">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #1d1d1b;
+        stroke-miterlimit: 10;
+        stroke-width: 2px;
+      }
+    </style>
+  </defs>
+  <g id="_Шар_1-2" data-name="Шар 1">
+    <g>
+      <polygon class="cls-1" points="1 264.25 1 1 453.19 1 453.19 104.07 466.82 117.69 319.72 264.79 1 264.25"/>
+      <line class="cls-1" x1="152.46" y1="53.95" x2="152.46" y2="205.41"/>
+      <path class="cls-1" d="M115.11,232.02c19.3,0,35.33,14.05,38.38,32.49"/>
+      <line class="cls-1" x1="115.11" y1="264.44" x2="115.11" y2="232.02"/>
+    </g>
+  </g>
+</svg>
